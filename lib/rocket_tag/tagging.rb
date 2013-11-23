@@ -5,6 +5,8 @@ module RocketTag
     belongs_to :taggable, :polymorphic => true
     belongs_to :tagger,   :polymorphic => true
 
+    attr_accessible :tag, :taggable, :context, :tagger
+
     validates_presence_of :context
     validates_presence_of :tag_id
 
